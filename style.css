@@ -684,3 +684,21 @@ button:focus {
     }
 
 }
+
+<style>
+    #message-notification {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        background: #28a745;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 5px;
+        font-weight: bold;
+        display: none;
+    }
+    
+    .hidden {
+        display: none;
+    }
+</style>
