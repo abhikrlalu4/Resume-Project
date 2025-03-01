@@ -26,3 +26,23 @@ function scrollVertically(targetSection) {
     }
     window.scrollBy(0, 50);
 }
+
+<script>
+    document.getElementById("contact-form").addEventListener("submit", function(event) {
+        event.preventDefault(); // Prevent form submission
+        let name = document.getElementById("input-name").value;
+        let message = document.getElementById("input-message").value;
+
+        let notification = document.getElementById("message-notification");
+        let notificationText = document.getElementById("notification-text");
+
+        notificationText.textContent = `From: ${name} - "${message}"`;
+        notification.classList.remove("hidden");
+
+        setTimeout(() => {
+            notification.classList.add("hidden");
+        }, 5000); // Hide after 5 seconds
+
+        this.reset(); // Reset form after submission
+    });
+</script>
